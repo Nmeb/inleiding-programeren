@@ -14,11 +14,11 @@ let pizzaklaar = document.querySelector("#pizzaklaar")
 //sausoptie kiezen
 function sausKiezen(saus) {
   if (saus == "tomatenknop") {
-    tomaten.src = "/img/tom.png"
-    bbq.src = "";
+    tomaten.src = "img/tom.png"
+    bbq.src = ""
 
   } else if (saus == "bbqknop") {
-    bbq.src = "/img/bbq.png"
+    bbq.src = "img/bbq.png"
     tomaten.src = ""
   }
 }
@@ -27,11 +27,11 @@ function sausKiezen(saus) {
 //kaasoptie kiezen
 function kaasKiezen(kaas) {
   if (kaas === "parmezaansknop") {
-    parmezaans.src = "/img/parm.png"
-    cheddar.src = "";
+    parmezaans.src = "img/parm.png"
+    cheddar.src = ""
 
   } else if (kaas == "cheddarknop") {
-    cheddar.src = "/img/ched.png"
+    cheddar.src = "img/ched.png"
     parmezaans.src = ""
   }
 }
@@ -39,11 +39,11 @@ function kaasKiezen(kaas) {
 //topingoptie kiezen
 function topingKiezen(topping) {
   if (topping == "peperoniknop") {
-    peperoni.src = "/img/pep.png"
+    peperoni.src = "img/pep.png"
     ham.src = ""
 
   } else if (topping == "hamknop") {
-    ham.src = "/img/ham.png"
+    ham.src = "img/ham.png"
     peperoni.src = ""
   }
 }
@@ -52,7 +52,7 @@ function topingKiezen(topping) {
 let toppings = [tomaten, bbq, parmezaans, cheddar, peperoni, ham]
 let tomatenKnop = document.querySelector('#tomatenknop')
 let bbqKnop = document.querySelector('#bbqknop')
-let parmezaansKnop = document.querySelector('#parmezaansknop');
+let parmezaansKnop = document.querySelector('#parmezaansknop')
 let cheddarKnop = document.querySelector('#cheddarknop')
 let peperoniKnop = document.querySelector('#peperoniknop')
 let hamKnop = document.querySelector('#hamknop')
@@ -64,7 +64,7 @@ function pizzaKlaar() {
   toppings.forEach(function(topping) {
     topping.src = ""
   });
-  pizzaklaar.src = "/img/klaar.png"
+  pizzaklaar.src = "img/klaar.png"
 }
 
 
@@ -105,7 +105,7 @@ allDoneBtn.addEventListener("click", function() {
 
 // audio toevoegen met behulp van het volgend video: https://youtu.be/3xlws5og44U?si=GeweRo71W0odgq1p
 function speelMuziek (){
-  let audio = new Audio ("/img/finish.mp3")
+  let audio = new Audio ("img/finish.mp3")
   audio.play ()
 }
 afspelen.addEventListener("click", speelMuziek)
