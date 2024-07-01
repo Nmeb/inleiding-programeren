@@ -1,7 +1,7 @@
 console.log("Test Test")
 
 
-//alle buttons in html selecteren 
+//alle images met lege src in html selecteren 
 let tomaten = document.querySelector("#tomaten")
 let bbq = document.querySelector("#bbq")
 let parmezaans = document.querySelector("#parmezaans")
@@ -49,6 +49,16 @@ function topingKiezen(topping) {
 }
 
 
+//klik op stel samen
+function pizzaKlaar() {
+  toppings.forEach(function(topping) {
+    topping.src = ""
+  })
+  pizzaklaar.src = "img/klaar.png"
+}
+
+
+//alle buttons in html selecteren
 let toppings = [tomaten, bbq, parmezaans, cheddar, peperoni, ham]
 let tomatenKnop = document.querySelector('#tomatenknop')
 let bbqKnop = document.querySelector('#bbqknop')
@@ -56,18 +66,11 @@ let parmezaansKnop = document.querySelector('#parmezaansknop')
 let cheddarKnop = document.querySelector('#cheddarknop')
 let peperoniKnop = document.querySelector('#peperoniknop')
 let hamKnop = document.querySelector('#hamknop')
-let allDoneBtn = document.querySelector('#samenstellenklaar')
+let samenstellenklaar = document.querySelector('#samenstellenklaar')
 let afspelen = document.getElementById("samenstellenklaar")
 
-//samenstellen klaar klikken
-function pizzaKlaar() {
-  toppings.forEach(function(topping) {
-    topping.src = ""
-  });
-  pizzaklaar.src = "img/klaar.png"
-}
 
-
+//functies roepen na klik op de buttons 
 tomatenKnop.addEventListener("click", function() {
   sausKiezen("tomatenknop")
 })
@@ -98,9 +101,11 @@ hamKnop.addEventListener("click", function() {
 })
 
 
-allDoneBtn.addEventListener("click", function() {
+//functie roepen na klik op stel samen
+samenstellenklaar.addEventListener("click", function() {
   pizzaKlaar()
 })
+
 
 
 // audio toevoegen met behulp van het volgend video: https://youtu.be/3xlws5og44U?si=GeweRo71W0odgq1p
@@ -110,6 +115,7 @@ function speelMuziek (){
 }
 afspelen.addEventListener("click", speelMuziek)
 
-// de bronnen 
+
+// overige bronnen 
 // foto's : foto https://www.freepik.com/free-vector/set-pizza-elements_4430118.htm#fromView=search&page=1&position=8&uuid=2b505ad8-0e59-4128-bc8f-3441b81d5003
 // audio : https://pixabay.com/nl/sound-effects/search/finish/
