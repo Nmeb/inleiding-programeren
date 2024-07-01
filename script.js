@@ -10,6 +10,17 @@ let peperoni = document.querySelector("#peperoni")
 let ham = document.querySelector("#ham")
 let pizzaklaar = document.querySelector("#pizzaklaar")
 
+//alle buttons in html selecteren
+let toppings = [tomaten, bbq, parmezaans, cheddar, peperoni, ham]
+let tomatenKnop = document.querySelector('#tomatenknop')
+let bbqKnop = document.querySelector('#bbqknop')
+let parmezaansKnop = document.querySelector('#parmezaansknop')
+let cheddarKnop = document.querySelector('#cheddarknop')
+let peperoniKnop = document.querySelector('#peperoniknop')
+let hamKnop = document.querySelector('#hamknop')
+let samenstellenklaar = document.querySelector('#samenstellenklaar')
+let afspelen = document.getElementById("samenstellenklaar")
+
 
 //sausoptie kiezen
 function sausKiezen(saus) {
@@ -36,6 +47,7 @@ function kaasKiezen(kaas) {
   }
 }
 
+
 //topingoptie kiezen
 function topingKiezen(topping) {
   if (topping == "peperoniknop") {
@@ -50,6 +62,7 @@ function topingKiezen(topping) {
 
 
 //klik op stel samen
+// bron met behulp van chatgpt deze functie toegevoegd https://chatgpt.com/c/8923a46e-3160-47ec-8d8c-5c8a0e943d55
 function pizzaKlaar() {
   toppings.forEach(function(topping) {
     topping.src = ""
@@ -58,19 +71,8 @@ function pizzaKlaar() {
 }
 
 
-//alle buttons in html selecteren
-let toppings = [tomaten, bbq, parmezaans, cheddar, peperoni, ham]
-let tomatenKnop = document.querySelector('#tomatenknop')
-let bbqKnop = document.querySelector('#bbqknop')
-let parmezaansKnop = document.querySelector('#parmezaansknop')
-let cheddarKnop = document.querySelector('#cheddarknop')
-let peperoniKnop = document.querySelector('#peperoniknop')
-let hamKnop = document.querySelector('#hamknop')
-let samenstellenklaar = document.querySelector('#samenstellenklaar')
-let afspelen = document.getElementById("samenstellenklaar")
-
-
 //functies roepen na klik op de buttons 
+//bron: chatgpt gevraagd hoe ik de functies moet roepen: https://chatgpt.com/c/921f45da-deef-4c50-8ba8-cec83cc87caf
 tomatenKnop.addEventListener("click", function() {
   sausKiezen("tomatenknop")
 })
