@@ -29,13 +29,7 @@ button {
   margin-top: 8%;
 }
 
-#tomaten, 
-#bbq,
-#parmezaans,
-#cheddar, 
-#peperoni,
-#ham,
-#pizzaklaar {
+#tomaten, #bbq, #parmezaans, #cheddar, #peperoni, #ham, #pizzaklaar {
   position: absolute;
   z-index: 2;
   width: 20%;

@@ -10,6 +10,7 @@ let peperoni = document.querySelector("#peperoni")
 let ham = document.querySelector("#ham")
 let pizzaklaar = document.querySelector("#pizzaklaar")
 
+
 //alle buttons in html selecteren
 let toppings = [tomaten, bbq, parmezaans, cheddar, peperoni, ham]
 let tomatenKnop = document.querySelector('#tomatenknop')
@@ -61,8 +62,8 @@ function topingKiezen(topping) {
 }
 
 
-//klik op stel samen
-// bron met behulp van chatgpt deze functie toegevoegd https://chatgpt.com/c/8923a46e-3160-47ec-8d8c-5c8a0e943d55
+//klik op stel samen knop
+// bron: met behulp van chatgpt deze functie toegevoegd https://chatgpt.com/c/8923a46e-3160-47ec-8d8c-5c8a0e943d55
 function pizzaKlaar() {
   toppings.forEach(function(topping) {
     topping.src = ""
@@ -73,6 +74,7 @@ function pizzaKlaar() {
 
 //functies roepen na klik op de buttons 
 //bron: chatgpt gevraagd hoe ik de functies moet roepen: https://chatgpt.com/c/921f45da-deef-4c50-8ba8-cec83cc87caf
+//bron: om de arrow function anders te schrijven https://www.w3schools.com/js/js_arrow_function.asp
 tomatenKnop.addEventListener("click", function() {
   sausKiezen("tomatenknop")
 })
@@ -119,5 +121,6 @@ afspelen.addEventListener("click", speelMuziek)
 
 
 // overige bronnen 
-// foto's : foto https://www.freepik.com/free-vector/set-pizza-elements_4430118.htm#fromView=search&page=1&position=8&uuid=2b505ad8-0e59-4128-bc8f-3441b81d5003
-// audio : https://pixabay.com/nl/sound-effects/search/finish/
+// ingredienten : foto https://www.freepik.com/free-vector/set-pizza-elements_4430118.htm#fromView=search&page=1&position=8&uuid=2b505ad8-0e59-4128-bc8f-3441b81d5003
+// pizzadeeg : https://kr.pinterest.com/pin/995788167586073972/
+//audio : https://pixabay.com/nl/sound-effects/search/finish/
