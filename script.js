@@ -8,19 +8,19 @@ let parmezaans = document.querySelector("#parmezaans")
 let cheddar = document.querySelector("#cheddar")
 let peperoni = document.querySelector("#peperoni")
 let ham = document.querySelector("#ham")
-const pizzaklaar = document.querySelector("#pizzaklaar")
+let pizzaklaar = document.querySelector("#pizzaklaar")
 
 
 // alle buttons in html selecteren
 let toppings = [tomaten, bbq, parmezaans, cheddar, peperoni, ham]
-let tomatenKnop = document.querySelector('#tomatenknop')
-let bbqKnop = document.querySelector('#bbqknop')
-let parmezaansKnop = document.querySelector('#parmezaansknop')
-let cheddarKnop = document.querySelector('#cheddarknop')
-let peperoniKnop = document.querySelector('#peperoniknop')
-let hamKnop = document.querySelector('#hamknop')
-let samenstellenklaar = document.querySelector('#samenstellenklaar')
-const afspelen = document.getElementById("samenstellenklaar")
+let tomatenKnop = document.querySelector("#tomatenknop")
+let bbqKnop = document.querySelector("#bbqknop")
+let parmezaansKnop = document.querySelector("#parmezaansknop")
+let cheddarKnop = document.querySelector("#cheddarknop")
+let peperoniKnop = document.querySelector("#peperoniknop")
+let hamKnop = document.querySelector("#hamknop")
+let samenstellenklaar = document.querySelector("#samenstellenklaar")
+let afspelen = document.getElementById("samenstellenklaar")
 
 
 // sausoptie kiezen
