@@ -8,7 +8,7 @@ let parmezaans = document.querySelector("#parmezaans")
 let cheddar = document.querySelector("#cheddar")
 let peperoni = document.querySelector("#peperoni")
 let ham = document.querySelector("#ham")
-let pizzaklaar = document.querySelector("#pizzaklaar")
+const pizzaklaar = document.querySelector("#pizzaklaar")
 
 
 //alle buttons in html selecteren
@@ -20,7 +20,7 @@ let cheddarKnop = document.querySelector('#cheddarknop')
 let peperoniKnop = document.querySelector('#peperoniknop')
 let hamKnop = document.querySelector('#hamknop')
 let samenstellenklaar = document.querySelector('#samenstellenklaar')
-let afspelen = document.getElementById("samenstellenklaar")
+const afspelen = document.getElementById("samenstellenklaar")
 
 
 //sausoptie kiezen
