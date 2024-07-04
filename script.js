@@ -2,26 +2,26 @@ console.log("Test Test")
 
 
 // alle images met lege src in html selecteren 
-let tomaten = document.querySelector("#tomaten")
-let bbq = document.querySelector("#bbq")
-let parmezaans = document.querySelector("#parmezaans")
-let cheddar = document.querySelector("#cheddar")
-let peperoni = document.querySelector("#peperoni")
-let ham = document.querySelector("#ham")
-let pizzaklaar = document.querySelector("#pizzaklaar")
+const tomaten = document.querySelector("#tomaten")
+const bbq = document.querySelector("#bbq")
+const parmezaans = document.querySelector("#parmezaans")
+const cheddar = document.querySelector("#cheddar")
+const peperoni = document.querySelector("#peperoni")
+const ham = document.querySelector("#ham")
+const pizzaklaar = document.querySelector("#pizzaklaar")
+const toppings = [tomaten, bbq, parmezaans, cheddar, peperoni, ham]
 
 
 // alle buttons in html selecteren
-let toppings = [tomaten, bbq, parmezaans, cheddar, peperoni, ham]
-let tomatenKnop = document.querySelector("#tomatenknop")
-let bbqKnop = document.querySelector("#bbqknop")
-let parmezaansKnop = document.querySelector("#parmezaansknop")
-let cheddarKnop = document.querySelector("#cheddarknop")
-let peperoniKnop = document.querySelector("#peperoniknop")
-let hamKnop = document.querySelector("#hamknop")
-let samenstellenklaar = document.querySelector("#samenstellenklaar")
-let afspelen = document.getElementById("samenstellenklaar")
-
+const tomatenKnop = document.querySelector("#tomatenknop")
+const bbqKnop = document.querySelector("#bbqknop")
+const parmezaansKnop = document.querySelector("#parmezaansknop")
+const cheddarKnop = document.querySelector("#cheddarknop")
+const peperoniKnop = document.querySelector("#peperoniknop")
+const hamKnop = document.querySelector("#hamknop")
+const samenstellenklaar = document.querySelector("#samenstellenklaar")
+const afspelen = document.getElementById("samenstellenklaar")
+const audio = new Audio ("img/finish.mp3")
 
 // sausoptie kiezen
 function sausKiezen(saus) {
@@ -64,11 +64,13 @@ function topingKiezen(topping) {
 
 // klik op stel samen knop
 // bron: met behulp van chatgpt deze functie toegevoegd https://chatgpt.com/c/8923a46e-3160-47ec-8d8c-5c8a0e943d55
+// audio toevoegen met behulp van volgende video: https://youtu.be/3xlws5og44U?si=GeweRo71W0odgq1p
 function pizzaKlaar() {
   toppings.forEach(function(topping) {
     topping.src = ""
   })
   pizzaklaar.src = "img/klaar.png"
+  audio.play ()
 }
 
 
@@ -109,15 +111,6 @@ hamKnop.addEventListener("click", function() {
 samenstellenklaar.addEventListener("click", function() {
   pizzaKlaar()
 })
-
-
-
-// audio toevoegen met behulp van volgende video: https://youtu.be/3xlws5og44U?si=GeweRo71W0odgq1p
-function speelMuziek (){
-  let audio = new Audio ("img/finish.mp3")
-  audio.play ()
-}
-afspelen.addEventListener("click", speelMuziek)
 
 
 // overige bronnen:
